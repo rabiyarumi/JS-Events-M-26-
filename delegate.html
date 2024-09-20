@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Delegate</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <h1>Explore Event Delegate</h1>
     <ul id="list-container">
-        <li class="item">Lorem, ipsum.</li>
-        <li class="item">Ullam, minus!</li>
-        <li class="item">Ut, suscipit?</li>
-        <li class="item">Odit, sequi!</li>
-        <li class="item">Quibus, dolorib</li>
-        <li class="item">Explicabo, dolorem?</li>
+      <li class="item">Lorem, ipsum.</li>
+      <li class="item">Ullam, minus!</li>
+      <li class="item">Ut, suscipit?</li>
+      <li class="item">Odit, sequi!</li>
+      <li class="item">Quibus, dolorib</li>
+      <li class="item">Explicabo, dolorem?</li>
     </ul>
-    
+    <button id="btn-add">Add Item</button>
     <script>
-        document.getElementsByClassName('item')
+      // const items = document.getElementsByClassName('item');
+      // console.log(items);
+      // //item will be removed whene its clicked
+      // for (item of items ){
+      //       item.addEventListener('click', function(event){
+      //       event.target.parentNode.removeChild(event.target)
+
+      //       // console.log(item); //1 serial a ashte thakbe
+      //       // console.log(event.target) //jeta click korbo seta ashbe
+      //       // console.log(event.target.parentNode)
+      //   })
+      // }
+      document.getElementById("list-container").addEventListener('click', function(event){
+        // console.log(event.target)
+        //remove the clicked item
+        event.target.parentNode.removeChild(event.target);
+      })
+      document.getElementById("btn-add").addEventListener("click", function () {
+        const listContainer = document.getElementById("list-container");
+        const li = document.createElement("li");
+        li.innerText = "New Item Added";
+        li.classList.add("item");
+        listContainer.appendChild(li);
+      });
     </script>
-</body>
+  </body>
 </html>
