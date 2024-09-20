@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <h1>Today I'm learning JavaScript events</h1>
+        <h2>On-Click Properties</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          nulla odio at molestiae veritatis nobis repellendus dolorem, nam
+          magni! Ipsam quisquam tempore nostrum fugiat in nam cumque repellat
+          eveniet nemo.
+        </p>
+        <ul>
+          <!-- Onclick -->
+          <!--option-1 console anything we will not use it -->
+          <li>
+            <button onclick="console.log('I am  clicked')">Click me</button>
+          </li>
+          <!-- option 1 -->
+          <li>
+            <button onclick="document.body.style.backgroundColor= 'yellow' ">
+              Inline yellow
+            </button>
+          </li>
+          <!-- option-2 option No- 1:- Inline : dirrecly set on the html element -->
+          <li>
+            <button onclick="makeRed()">Make Red</button>
+          </li>
+          <!-- option-3.1  -->
+          <li>
+            <button id="make-blue">Make Blue</button>
+          </li>
+          <!-- option-3.2  -->
+          <li>
+            <button id="make-purpel">Make Purpel</button>
+          </li>
+          <!-- option-4.1 add-even-listener -->
+          <li>
+            <button id="make-pink">Make pink</button>
+          </li>
+          <!-- option-4.2 add-even-listener -->
+          <li>
+            <button id="make-green">Make Green</button>
+          </li>
+          <!-- option-4.3 add-even-listener -->
+          <li>
+            <button id="make-goldenrod">Make Golen-rod</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      
+    </script>
+    <script src="./js/event.js"></script>
+  </body>
+</html>
